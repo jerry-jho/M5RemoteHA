@@ -1,0 +1,46 @@
+//**********************************************
+ 私有数据模板
+ 请复制为private.h，然后根据自己的实际情况填写
+ 请勿check in避免隐私泄露!
+************************************************//
+
+// 替换尖括号以及以内的内容为你的WiFi名称
+const char * ssid = "<YOUR-WIFI-SSID>";
+
+// 替换尖括号以及以内的内容为你的WiFi密码
+const char * password = "<YOUR-WIFI-PASSWORD>";
+
+// 各个房间的名字 见 lib\RCConfig\RCConfig.cpp
+
+// 房间数量见 lib\RCConfig\RCConfig.h
+
+// 替换<YOUR_HA_IP>为你HA服务器的实际地址，例如 192.168.1.2
+const char * api_status_address = "http://<YOUR_HA_IP>:8123/api/states/";
+
+// 如果你有多个房间，则增加相应的 id
+const char * room_api_climate_list[] = {
+  "climate.ke_ting_kong_diao",
+  "climate.zhu_wo_kong_diao",
+  "climate.ci_wo_kong_diao",
+  "climate.shu_fang_kong_diao"
+};
+
+// room_api_fan_list 和 room_api_climate_list的元素个数必须相同
+
+const char * room_api_fan_list[] = {
+  "select.ke_ting_kong_diao_feng_su",
+  "select.zhu_wo_kong_diao_feng_su",
+  "select.ci_wo_kong_diao_feng_su",
+  "select.shu_fang_kong_diao_feng_su"
+};
+
+// 替换<YOUR_HA_IP>为你HA服务器的实际地址，例如 192.168.1.2
+const char * api_turn_on_address = "http://<YOUR_HA_IP>:8123/api/services/climate/turn_on";
+const char * api_turn_off_address = "http://<YOUR_HA_IP>:8123/api/services/climate/turn_off";
+const char * api_set_hvac_address = "http://1<YOUR_HA_IP>:8123/api/services/climate/set_hvac_mode";
+const char * api_set_temperature_address = "http://<YOUR_HA_IP>:8123/api/services/climate/set_temperature";
+const char * api_set_next_address = "http://<YOUR_HA_IP>:8123/api/services/select/select_next";
+
+// 替换<TOKEN>为你的HA的长效token
+// 浏览器访问 http://<YOUR_HA_IP>:8123/profile 拉到最后增加一个
+const char * token = "Bearer <TOKEN>";
