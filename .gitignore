@@ -1,3 +1,5 @@
 .pio
 .vscode
 private.h
+lib/README
+test/README
